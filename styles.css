@@ -102,7 +102,7 @@ body {
     left: 0;
     width: 4px;
     height: 100%;
-    background: linear-gradient(180deg, #ef4444, #3b82f6, #10b981, #a855f7, #f59e0b);
+    background: linear-gradient(180deg, #E96F6F, #5b7bef, #5ab88a, #AB6FE9, #F3AC3C);
 }
 
 .card h4 {
@@ -191,7 +191,7 @@ body {
     left: 32px;
     font-size: 80px;
     font-weight: 700;
-    background: linear-gradient(135deg, #ef4444, #3b82f6, #10b981, #a855f7, #f59e0b);
+    background: linear-gradient(135deg, #E96F6F, #5b7bef, #5ab88a, #AB6FE9, #F3AC3C);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -248,7 +248,7 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    background: linear-gradient(135deg, #ef4444, #3b82f6, #10b981, #a855f7, #f59e0b);
+    background: linear-gradient(135deg, #E96F6F, #5b7bef, #5ab88a, #AB6FE9, #F3AC3C);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -284,7 +284,7 @@ body {
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #0071e3;
+    background: linear-gradient(135deg, #E96F6F, #5b7bef, #5ab88a, #AB6FE9, #F3AC3C);
 }
 
 .closing-slide {
