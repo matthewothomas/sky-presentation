@@ -102,8 +102,14 @@ body {
     left: 0;
     width: 4px;
     height: 100%;
-    background: linear-gradient(180deg, #E96F6F, #5b7bef, #5ab88a, #AB6FE9, #F3AC3C);
+    background: #0071e3;
 }
+
+/* Pillar-specific card colors */
+.section-pillar-1 .card::before { background: #E96F6F; }
+.section-pillar-2 .card::before { background: #5b7bef; }
+.section-pillar-3 .card::before { background: #5ab88a; }
+.section-pillar-4 .card::before { background: #AB6FE9; }
 
 .card h4 {
     font-size: 22px;
@@ -248,12 +254,14 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    background: linear-gradient(135deg, #E96F6F, #5b7bef, #5ab88a, #AB6FE9, #F3AC3C);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
     margin-bottom: 16px;
 }
+
+/* Individual pillar colors */
+.pillar-1 { color: #E96F6F; }
+.pillar-2 { color: #5b7bef; }
+.pillar-3 { color: #5ab88a; }
+.pillar-4 { color: #AB6FE9; }
 
 .title-slide {
     justify-content: center;
