@@ -227,6 +227,12 @@ body {
     justify-content: center;
 }
 
+.sky-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 32px;
+}
+
 .title-meta {
     display: flex;
     gap: 32px;
