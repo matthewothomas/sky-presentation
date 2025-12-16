@@ -142,6 +142,8 @@ body {
     letter-spacing: -0.02em;
     margin-bottom: 20px;
     color: #1d1d1f;
+    display: flex;
+    align-items: center;
 }
 
 .slide h3 {
@@ -369,7 +371,7 @@ body {
 .title-meta-item {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
     font-size: 14px;
     color: #48484a;
 }
@@ -473,6 +475,43 @@ body {
 .section-pillar-4 ~ .slide-counter {
     color: white;
 }
+
+/* Material Icons Styling */
+.material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 24;
+    vertical-align: middle;
+}
+
+/* Icons in headings */
+h2 .material-symbols-outlined {
+    font-size: 36px;
+    margin-right: 12px;
+    vertical-align: middle;
+}
+
+/* Icons in title meta */
+.title-meta-item .material-symbols-outlined {
+    font-size: 20px;
+    color: #0071e3;
+}
+
+/* Card icons */
+.card-icon {
+    font-size: 32px !important;
+    display: block;
+    margin-bottom: 16px;
+    opacity: 0.6;
+}
+
+/* Pillar-specific card icon colors */
+.section-pillar-1 .card-icon { color: #E96F6F; }
+.section-pillar-2 .card-icon { color: #5b7bef; }
+.section-pillar-3 .card-icon { color: #5ab88a; }
+.section-pillar-4 .card-icon { color: #AB6FE9; }
 
 @media (max-width: 1024px) {
     .slide { padding: 60px 40px 80px; }
