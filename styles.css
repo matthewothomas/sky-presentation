@@ -41,6 +41,92 @@ body {
     z-index: 1;
 }
 
+/* Pillar-themed sections with colored backgrounds */
+.section-pillar-1 {
+    background: linear-gradient(135deg, #E96F6F 0%, #d15858 100%);
+    color: white;
+}
+
+.section-pillar-2 {
+    background: linear-gradient(135deg, #5b7bef 0%, #4563d6 100%);
+    color: white;
+}
+
+.section-pillar-3 {
+    background: linear-gradient(135deg, #5ab88a 0%, #42a073 100%);
+    color: white;
+}
+
+.section-pillar-4 {
+    background: linear-gradient(135deg, #AB6FE9 0%, #9456d1 100%);
+    color: white;
+}
+
+/* Update typography for colored sections */
+.section-pillar-1 h2,
+.section-pillar-2 h2,
+.section-pillar-3 h2,
+.section-pillar-4 h2,
+.section-pillar-1 h3,
+.section-pillar-2 h3,
+.section-pillar-3 h3,
+.section-pillar-4 h3 {
+    color: white;
+}
+
+.section-pillar-1 .subtitle,
+.section-pillar-2 .subtitle,
+.section-pillar-3 .subtitle,
+.section-pillar-4 .subtitle {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.section-pillar-1 .pillar-badge,
+.section-pillar-2 .pillar-badge,
+.section-pillar-3 .pillar-badge,
+.section-pillar-4 .pillar-badge {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Cards within colored sections */
+.section-pillar-1 .card,
+.section-pillar-2 .card,
+.section-pillar-3 .card,
+.section-pillar-4 .card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+/* CTA boxes in colored sections */
+.section-pillar-1 .cta-box {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.section-pillar-2 .cta-box {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.section-pillar-3 .cta-box {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.section-pillar-4 .cta-box {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* Quote boxes in colored sections */
+.section-pillar-1 .quote-box,
+.section-pillar-2 .quote-box,
+.section-pillar-3 .quote-box,
+.section-pillar-4 .quote-box {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
 .slide h1 {
     font-size: clamp(48px, 8vw, 80px);
     font-weight: 700;
@@ -258,10 +344,10 @@ body {
 }
 
 /* Individual pillar colors */
-.pillar-1 { color: #E96F6F; }
-.pillar-2 { color: #5b7bef; }
-.pillar-3 { color: #5ab88a; }
-.pillar-4 { color: #AB6FE9; }
+.pillar-1 { color: rgba(255, 255, 255, 0.8); }
+.pillar-2 { color: rgba(255, 255, 255, 0.8); }
+.pillar-3 { color: rgba(255, 255, 255, 0.8); }
+.pillar-4 { color: rgba(255, 255, 255, 0.8); }
 
 .title-slide {
     justify-content: center;
@@ -378,6 +464,14 @@ body {
     font-size: 14px;
     color: #48484a;
     z-index: 1000;
+}
+
+/* White navigation on colored backgrounds */
+.section-pillar-1 ~ .slide-counter,
+.section-pillar-2 ~ .slide-counter,
+.section-pillar-3 ~ .slide-counter,
+.section-pillar-4 ~ .slide-counter {
+    color: white;
 }
 
 @media (max-width: 1024px) {
