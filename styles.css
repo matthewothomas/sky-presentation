@@ -407,3 +407,8 @@ body {
         transition: none;
     }
 }
+
+/* Navigation button icon styling */
+.nav-btn .material-symbols-outlined {
+    font-size: 24px;
+}
