@@ -125,6 +125,11 @@ body {
     width: 100%;
 }
 
+.card:hover {
+    transform: none !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.08) !important;
+}
+
 .card h4 {
     font-size: 22px;
     font-weight: 600;
@@ -167,25 +172,30 @@ body {
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    max-width: 1440px;
+    max-width: 1700px;
+    /* Increased by ~30% */
     margin: 0 auto;
 }
 
 .grid-2 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    /* Force 2 equal columns */
+    gap: 24px;
 }
 
 .grid-3 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    /* Force 3 equal columns */
+    gap: 24px;
 }
 
 .grid-2 .card,
 .grid-3 .card {
     max-width: none;
+    height: 100%;
+    /* Ensure equal height */
 }
 
 .stat-large {
@@ -415,12 +425,28 @@ body {
 
 /* Gradient closing slide */
 .gradient-closing {
-    background: linear-gradient(135deg,
-            #E96F6F 0%,
-            #5b7bef 33%,
-            #5ab88a 66%,
-            #AB6FE9 100%);
+    background: linear-gradient(90deg,
+            #FF8C00 0%,
+            #9D00FF 20%,
+            #0044FF 40%,
+            #FF0055 60%,
+            #0099FF 80%,
+            #8800FF 100%);
     padding: 0 !important;
+}
+
+/* Sky Text Gradient */
+.text-gradient-sky {
+    background: linear-gradient(90deg,
+            #ff7e00 0%,
+            #ff0055 30%,
+            #a200ff 60%,
+            #0044ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    /* Ensures gradient behaves correctly */
 }
 
 .closing-title {
