@@ -231,26 +231,53 @@ body {
 /* Stat Pill Color Variants (Light tints) */
 .stat-pill.coral {
     background: rgba(233, 111, 111, 0.15);
-    color: #d15858;
 }
 
 .stat-pill.blue {
     background: rgba(91, 123, 239, 0.15);
-    color: #4563d6;
 }
 
 .stat-pill.green {
     background: rgba(90, 184, 138, 0.15);
-    color: #42a073;
 }
 
 .stat-pill.purple {
     background: rgba(171, 111, 233, 0.15);
+}
+
+/* Stat Value Text Colors (to ensure contrast inside tints) */
+.stat-pill.coral .stat-value {
+    color: #d15858;
+}
+
+.stat-pill.blue .stat-value {
+    color: #4563d6;
+}
+
+.stat-pill.green .stat-value {
+    color: #42a073;
+}
+
+.stat-pill.purple .stat-value {
     color: #9456d1;
 }
 
+.stat-value {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 4px;
+}
+
+.stat-sublabel {
+    font-size: 13px;
+    color: #48484a;
+    font-weight: 500;
+    opacity: 0.8;
+}
 
 .stat-label {
+    /* Legacy - remove if unused or keep for compatibility */
     font-size: 14px;
     color: #48484a;
     margin-top: 8px;
@@ -259,7 +286,8 @@ body {
 .stats-row {
     display: flex;
     gap: 40px;
-    margin: 20px 0;
+    margin: 0 0 20px 0;
+    /* Reduced top margin to 0 to fix gap inconsistency */
     flex-wrap: wrap;
 }
 
@@ -311,15 +339,18 @@ body {
 .slide-counter {
     background: white;
     border: 1px solid #e5e5e5;
-    border-radius: 20px;
-    padding: 8px 16px;
-    font-size: 14px;
-    font-weight: 500;
-    color: #48484a;
+    border-radius: 24px;
+    height: 48px;
+    padding: 0 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1d1d1f;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    min-width: 60px;
-    text-align: center;
-    margin-right: 8px;
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
 }
 
 .nav-btn {
