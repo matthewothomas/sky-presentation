@@ -121,14 +121,8 @@ body {
     padding: 32px;
     margin-bottom: 20px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
     max-width: 600px;
     width: 100%;
-}
-
-.card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.06);
-    transform: translateY(-2px);
 }
 
 .card h4 {
@@ -173,7 +167,7 @@ body {
     flex-direction: column;
     gap: 20px;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
@@ -200,6 +194,17 @@ body {
     color: #1d1d1f;
     line-height: 1;
     letter-spacing: -0.03em;
+}
+
+.stat-pill {
+    display: inline-block;
+    background: #f5f5f7;
+    padding: 8px 16px;
+    border-radius: 12px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 8px;
 }
 
 .stat-label {
@@ -309,10 +314,10 @@ body {
 /* Material Icons */
 .material-symbols-outlined {
     font-variation-settings:
-    'FILL' 0,
-    'wght' 300,
-    'GRAD' 0,
-    'opsz' 24;
+        'FILL' 0,
+        'wght' 300,
+        'GRAD' 0,
+        'opsz' 24;
 }
 
 /* Card icons with colored backgrounds */
@@ -356,25 +361,25 @@ body {
     .slide {
         padding: 5% 8%;
     }
-    
+
     .grid-2,
     .grid-3 {
         grid-template-columns: 1fr;
     }
-    
+
     .nav-controls {
         bottom: 20px;
         right: 20px;
     }
-    
+
     .card {
         padding: 24px;
     }
-    
+
     .pillar-intro h2 {
         font-size: clamp(48px, 12vw, 80px);
     }
-    
+
     .card-icon {
         width: 56px;
         height: 56px;
@@ -386,11 +391,11 @@ body {
     .slide {
         padding: 5% 5%;
     }
-    
+
     .card {
         padding: 20px;
     }
-    
+
     .card-icon {
         width: 48px;
         height: 48px;
@@ -402,7 +407,7 @@ body {
     .slide {
         transition: none;
     }
-    
+
     .card {
         transition: none;
     }
@@ -410,11 +415,11 @@ body {
 
 /* Gradient closing slide */
 .gradient-closing {
-    background: linear-gradient(135deg, 
-        #E96F6F 0%, 
-        #5b7bef 33%, 
-        #5ab88a 66%, 
-        #AB6FE9 100%);
+    background: linear-gradient(135deg,
+            #E96F6F 0%,
+            #5b7bef 33%,
+            #5ab88a 66%,
+            #AB6FE9 100%);
     padding: 0 !important;
 }
 
@@ -488,6 +493,7 @@ body {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -503,7 +509,7 @@ body {
     .closing-ready-box {
         padding: 24px 32px;
     }
-    
+
     .closing-ready-box p {
         font-size: 20px;
     }
