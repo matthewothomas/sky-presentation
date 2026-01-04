@@ -630,6 +630,25 @@ body {
     }
 }
 
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Specific override for Closing Slide Title */
+.slide.active.closing-slide h1.closing-title {
+    animation: scaleIn 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation-delay: 0.1s;
+    /* Slight delay to sync with background fade */
+}
+
 /* Initially hide all cards on inactive slides */
 .slide:not(.active) .card {
     opacity: 0;
