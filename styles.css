@@ -427,15 +427,48 @@ body {
 }
 
 /* Gradient closing slide */
+/* Gradient closing slide - Sky Glass Style */
 .gradient-closing {
-    background: linear-gradient(90deg,
-            #FF8C00 0%,
-            #9D00FF 20%,
-            #0044FF 40%,
-            #FF0055 60%,
-            #0099FF 80%,
-            #8800FF 100%);
+    background:
+        radial-gradient(at 0% 0%, hsla(28, 100%, 74%, 1) 0, transparent 50%),
+        radial-gradient(at 100% 0%, hsla(189, 100%, 56%, 1) 0, transparent 50%),
+        radial-gradient(at 0% 100%, hsla(355, 100%, 93%, 1) 0, transparent 50%),
+        radial-gradient(at 100% 100%, hsla(270, 100%, 60%, 1) 0, transparent 50%),
+        radial-gradient(at 40% 40%, hsla(340, 100%, 76%, 1) 0, transparent 50%),
+        radial-gradient(at 80% 80%, hsla(240, 100%, 60%, 1) 0, transparent 50%);
+    background-color: #ff3366;
+    /* Fallback/Base */
     padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 24px;
+    padding: 60px 100px;
+    box-shadow:
+        0 8px 32px 0 rgba(31, 38, 135, 0.15),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Shine effect on glass card */
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
 }
 
 /* Sky Text Gradient */
