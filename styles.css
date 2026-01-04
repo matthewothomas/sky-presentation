@@ -146,6 +146,12 @@ body {
     font-size: 16px;
     line-height: 1.6;
     color: #48484a;
+    margin-bottom: 16px;
+    /* Added margin for consistency */
+}
+
+.card p:last-child {
+    margin-bottom: 0;
 }
 
 .card ul {
@@ -167,7 +173,8 @@ body {
     content: "•";
     position: absolute;
     left: 0;
-    color: #0071e3;
+    color: #48484a !important;
+    /* Updated to match text */
     font-weight: 700;
 }
 
@@ -212,6 +219,7 @@ body {
 .stat-pill {
     display: inline-block;
     background: #f5f5f7;
+    /* Default fallback */
     padding: 8px 16px;
     border-radius: 12px;
     font-size: 24px;
@@ -219,6 +227,28 @@ body {
     color: #1d1d1f;
     margin-bottom: 8px;
 }
+
+/* Stat Pill Color Variants (Light tints) */
+.stat-pill.coral {
+    background: rgba(233, 111, 111, 0.15);
+    color: #d15858;
+}
+
+.stat-pill.blue {
+    background: rgba(91, 123, 239, 0.15);
+    color: #4563d6;
+}
+
+.stat-pill.green {
+    background: rgba(90, 184, 138, 0.15);
+    color: #42a073;
+}
+
+.stat-pill.purple {
+    background: rgba(171, 111, 233, 0.15);
+    color: #9456d1;
+}
+
 
 .stat-label {
     font-size: 14px;
@@ -243,6 +273,8 @@ body {
     width: 120px;
     height: auto;
     margin-bottom: 40px;
+    opacity: 0;
+    /* Prepare for animation */
 }
 
 .closing-slide {
@@ -273,6 +305,21 @@ body {
     display: flex;
     gap: 12px;
     z-index: 1000;
+    align-items: center;
+}
+
+.slide-counter {
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #48484a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    min-width: 60px;
+    text-align: center;
+    margin-right: 8px;
 }
 
 .nav-btn {
@@ -513,6 +560,30 @@ body {
 
 .slide.active .card:nth-child(3) {
     animation-delay: 0.3s;
+}
+
+/* Title Slide Animations */
+.title-slide h1,
+.title-slide .subtitle,
+.title-slide .sky-logo {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.slide.active .sky-logo {
+    animation: slideInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: 0.1s;
+    /* Appeast first */
+}
+
+.slide.active h1 {
+    animation: slideInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: 0.3s;
+}
+
+.slide.active .subtitle {
+    animation: slideInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation-delay: 0.5s;
 }
 
 @keyframes slideInUp {
