@@ -408,7 +408,103 @@ body {
     }
 }
 
-/* Navigation button icon styling */
-.nav-btn .material-symbols-outlined {
+/* Gradient closing slide */
+.gradient-closing {
+    background: linear-gradient(135deg, 
+        #E96F6F 0%, 
+        #5b7bef 33%, 
+        #5ab88a 66%, 
+        #AB6FE9 100%);
+    padding: 0 !important;
+}
+
+.closing-title {
+    color: white !important;
+    font-size: clamp(56px, 10vw, 96px) !important;
+    margin-bottom: 32px !important;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+}
+
+.closing-subtitle {
+    color: white !important;
+    font-size: clamp(24px, 3vw, 32px) !important;
+    margin-bottom: 16px !important;
+    font-weight: 500;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.closing-website {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-size: clamp(16px, 2vw, 20px) !important;
+    margin-bottom: 56px !important;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.closing-ready-box {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 32px 48px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    max-width: 500px;
+}
+
+.closing-ready-box p {
     font-size: 24px;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin: 0;
+}
+
+/* Update bullet point colors to match text */
+.card li::before {
+    color: #48484a !important;
+}
+
+/* Card entrance animations */
+.card {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.slide.active .card {
+    animation: slideInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.slide.active .card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.slide.active .card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.slide.active .card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Initially hide all cards on inactive slides */
+.slide:not(.active) .card {
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .closing-ready-box {
+        padding: 24px 32px;
+    }
+    
+    .closing-ready-box p {
+        font-size: 20px;
+    }
 }
