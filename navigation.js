@@ -3,6 +3,7 @@ const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
+const homeBtn = document.getElementById('homeBtn');
 const slideCounter = document.getElementById('slideCounter');
 const progressFill = document.getElementById('progressFill');
 
@@ -12,6 +13,7 @@ function updateSlide() {
     slideCounter.textContent = `${currentSlide + 1} / ${totalSlides}`;
     progressFill.style.width = `${((currentSlide + 1) / totalSlides) * 100}%`;
     prevBtn.disabled = currentSlide === 0;
+    homeBtn.disabled = currentSlide === 0;
     nextBtn.disabled = currentSlide === totalSlides - 1;
 }
 
@@ -27,6 +29,11 @@ nextBtn.addEventListener('click', () => {
         currentSlide++;
         updateSlide();
     }
+});
+
+homeBtn.addEventListener('click', () => {
+    currentSlide = 0;
+    updateSlide();
 });
 
 document.addEventListener('keydown', (e) => {
